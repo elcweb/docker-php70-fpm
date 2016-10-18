@@ -6,7 +6,7 @@ RUN apt-get -q update \
     && apt-get -q install -y -o Dpkg::Options::="--force-confnew"  --no-install-recommends \
     php7.0 php7.0-cli php7.0-curl php-redis php7.0-mysql php7.0-sqlite php7.0-mcrypt php-pear \
     php7.0-fpm php7.0-json php7.0-xml php7.0-mbstring php7.0-zip \
-    git nodejs curl
+    git nodejs curl ca-certificates
 
 RUN apt-get -q clean -y \
     && rm -rf /var/lib/apt/lists/* \
