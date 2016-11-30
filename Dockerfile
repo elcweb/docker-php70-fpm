@@ -14,6 +14,8 @@ RUN apt-get -q clean -y \
 
 ADD php-fpm.conf /etc/php/7.0/fpm/php-fpm.conf
 ADD www.conf /etc/php/7.0/fpm/pool.d/www.conf
+ENV PHP_UID www-data
+ENV PHP_GID www-data
 
 EXPOSE 9000
 VOLUME /code
